@@ -4,8 +4,10 @@ Plugin Name: پرداخت دلخواه
 Plugin URI: https://wp-master.ir/pardakht-delkhah/
 Author: استاد وردپرس
 Author URI: https://wp-master.ir
-Version: 2.9.9
+Version: 3.0.0
 Description: با این پلاگین میتونید سیستم پرداخت خودتون رو راه اندازی کنید.
+Text Domain: cupri
+Domain Path: /languages
  */
 defined('ABSPATH') or die('No script kiddies please!');
 
@@ -44,6 +46,7 @@ class cupri
         $this->defines();
         $this->includes();
         add_action('after_setup_theme', array($this, 'init'), 10);
+        add_action('plugins_loaded', array($this, 'plugins_loaded'), 10);
         add_action('admin_init', array($this, 'add_caps'), 10);
         add_action('admin_menu', array($this, '_admin_menu'));
         add_shortcode('cupri', array($this, 'shortcode'));
@@ -83,13 +86,16 @@ class cupri
 
     }
 
-    function init()
+    function plugins_loaded()
     {
         if (get_option('cupri_redirect_after_activation_option', false)) {
             delete_option('cupri_redirect_after_activation_option');
             exit(wp_redirect(admin_url('edit.php?post_type=cupri_pay')));
         }
+    }
 
+    function init()
+    {
         /**
          * Listen to hear from returning requests
          */

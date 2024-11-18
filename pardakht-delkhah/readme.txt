@@ -1,25 +1,25 @@
 === پلاگین پرداخت دلخواه ===
 Contributors: goback2
 Donate link: https://wp-master.ir
-Tags: custom price payment,donaite,pardakhte delkhah ,پرداخت دلخواه,فرم پرداخت,دونیت,پرداخت,دریافت وجه
+Tags: custom price payment,donate,pardakhte delkhah ,پرداخت دلخواه,فرم پرداخت,دونیت,پرداخت,دریافت وجه
 Requires at least: 4.6
-Tested up to: 6.6.1
-Stable tag: 2.9.9
+Tested up to: 6.7.0
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 افزونه پرداخت دلخواه وردپرس
 
 == Description ==
-this is an iranian payment plugin that can be used as a custom payment system or a donaite system , so users can get money from users easiy,one of this pluin is that it is modular and can be extended to support more gateways.
+this is an iranian payment plugin that can be used as a custom payment system or a donate system , so users can get money from users easily,one of this plugin is that it is modular and can be extended to support more gateways.
 
 
-با این پلاگین [پرداخت دلخواه وردپرس](https://wp-master.ir/pardakht-delkhah/)  میتونید سیستم پرداخت خودتون رو راه اندازی کنید.
+با این پلاگین [پرداخت دلخواه وردپرس](https://wp-master.ir/pardakht-delkhah/) میتونید سیستم پرداخت خودتون رو راه‌اندازی کنید.
 تا اکنون این پلاگین بر روی درگاه های زیر توانایی کار کردن را داراست:
 + درگاه ملت
 + واسط زرین پال
 + واسط پی لاین (pay.ir)
-+ سداد /بانک ملی ( درگاه جدید)
++ سداد /بانک ملی (درگاه جدید)
 + پرداخت الکترونیک سپهر(مبنا کارت)
 
 امکانات:
@@ -56,6 +56,8 @@ nothing.
 
 
 == Changelog ==
+= 3.0.0 =
+* حل مشکل خطا در برگشت با فعال بودن پلاگین wp-sms
 = 2.9.9 =
 * افزودن برچسب ساعت در اطلاع رسانی ها و جدا کردن از تاریخ
 * تصحیح فیلد فقط خواندنی

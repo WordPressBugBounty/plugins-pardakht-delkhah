@@ -207,10 +207,14 @@ abstract class cupri_abstract_gateway
                 // $sms->msg = $messgae;
                 // $sms->SendSMS();
 
-                $to = $mobiles;
-                $msg = $messgae;
-                $is_flash = false;
-                $log = wp_sms_send($to, $msg, $is_flash);
+                try {
+                    $to = $mobiles;
+                    $msg = $messgae;
+                    $is_flash = false;
+                    $log = wp_sms_send($to, $msg, $is_flash);
+                } catch (Error $e) {
+                    error_log($e->getMessage());
+                }
 
 
             }
@@ -230,11 +234,14 @@ abstract class cupri_abstract_gateway
                 // $sms->to = $mobiles;
                 // $sms->msg = $messgae;
                 // $sms->SendSMS();
-
-                $to = $mobiles;
-                $msg = $messgae;
-                $is_flash = false;
-                $log = wp_sms_send($to, $msg, $is_flash);
+                try {
+                    $to = $mobiles;
+                    $msg = $messgae;
+                    $is_flash = false;
+                    $log = wp_sms_send($to, $msg, $is_flash);
+                } catch (Error $e) {
+                    error_log($e->getMessage());
+                }
 
 
             }
